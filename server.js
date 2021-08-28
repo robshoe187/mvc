@@ -16,7 +16,8 @@ const sess = {
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
-  })
+  }),
+  maxAge: 600000
 };
 
 app.use(session(sess));
